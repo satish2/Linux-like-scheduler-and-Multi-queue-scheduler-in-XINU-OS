@@ -1,6 +1,6 @@
-# Linux-like-scheduler-and-Multi-queue-scheduler-in-XINU-OS
-Process Scheduling - Linux like scheduler and Multi-Queue scheduling
+<h1>Process Scheduling - Linux like scheduler and Multi-Queue scheduling</h1>
 
+XINU is a small Unix-like operating system originally developed by Douglas Comer for instructional purposes at Purdue University. Process scheduling algorithm followed by XINU is to pick highest priority process first, which leads to starvation. In this project, linux-like scheduling algorithm and Mutli-queue algorithm both were implemented in XINU's kernel. 
 
 <h2>1) Linux-like Scheduler (based loosely	on the 2.2 Linux kernel)</h2>
 
@@ -31,3 +31,61 @@ For processes in the Normal queue, the scheduling algorithm is the same as in pa
 If a queue is selected but it contains no runnable processes, the scheduler automatically selects the other queue. Again, the NULL process is selected to run when and only when there are no other ready processes in both queues.
 
 Processes created by default (e.g., the master process) are Normal processes.
+
+<h2>Contents</h2>
+1. Other than TMP folder, rest all folders include content of XINU's root folder.
+2. In TMP, copy of all the changes that were made in various source files are present. 
+
+<h2>Kernel Compilation Instructions</h2>
+1. Please navigate to <b>Compile</b> folder in terminal and execute "make depend" followed with "make" command.
+2. This creates an OS image called 'xinu.elf' that will then be uploaded and run on the backend machines.
+
+<h2>Running XINU</h2>
+
+The XINU code runs on backend machines. To see which of the backends are available for booting XINU, type: 
+ 
+cs-status
+This will show you who, if anyone, is logged onto each backend and how long they have been using it. To boot your copy of XINU on a backend, connect to a back-end by issuing the command:
+cs-console
+With no arguments cs-console will connect you to the first available backend. You may specify a backend by name (backend21 through backend100). Now download your copy of XINU by typing:
+(control-@) OR (control-spacebar)
+
+// esc to local command-mode 
+
+
+(command-mode) ?        
+
+// show a list of supported commands  
+
+
+(command-mode) d 
+
+// download command 
+
+
+file: xinu.elf
+
+// tell it to download 'xinu.elf' (assuming you are under csc501-lab0/compile)
+
+
+(control-@) OR (control-spacebar)
+
+// esc to local command-mode 
+
+
+(command-mode) p        
+
+// powercycle the backend  
+// executes the code in main.c in <b>/sys</b> folder
+
+
+XINU should boot with a "Hello World, Xinu lives!" message.
+
+Typing (control-@) will always bring you back to '(command mode)' prompt. From here, you can quit by typing q. 
+ 
+(control-@) OR (control-spacebar)
+
+(command-mode) q        
+
+// quit the backend  
+
