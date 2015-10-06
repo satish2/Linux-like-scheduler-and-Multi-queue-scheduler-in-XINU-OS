@@ -33,7 +33,7 @@ If a queue is selected but it contains no runnable processes, the scheduler auto
 Processes created by default (e.g., the master process) are Normal processes.
 
 <h2>Contents</h2>
-1. Other than TMP folder, rest all folders include content of XINU's root folder.
+1. Other than TMP folder, rest all folders comprise XINU's source tree.
 2. In TMP, copy of all the changes that were made in various source files are present. 
 
 <h2>Kernel Compilation Instructions</h2>
