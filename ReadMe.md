@@ -1,6 +1,6 @@
 <h1>Process Scheduling - Linux like scheduler and Multi-Queue scheduling</h1>
 
-XINU is a small Unix-like operating system originally developed by Douglas Comer for instructional purposes at Purdue University. Process scheduling algorithm followed by XINU is to pick highest priority process first, which leads to starvation. In this project, linux-like scheduling algorithm and Mutli-queue algorithm both were implemented in XINU's kernel. 
+XINU is a small Unix-like operating system originally developed by Douglas Comer for instructional purposes at Purdue University. Process scheduling algorithm followed by XINU picks highest priority process first, which leads to starvation. In this project, linux-like scheduling algorithm and Mutli-queue algorithm both were implemented in XINU's kernel. 
 
 <h2>1) Linux-like Scheduler (based loosely	on the 2.2 Linux kernel)</h2>
 
